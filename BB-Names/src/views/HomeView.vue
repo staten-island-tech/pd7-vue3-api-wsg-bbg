@@ -1,7 +1,10 @@
 <template>
-  <p>
+  <div>
+    <sub v-for="babies in BBN.value" :key="babies">
+      {{ babies.nm }}
+    </sub>
     <TheGraph />
-  </p>
+  </div>
 </template>
 
 <script setup>
