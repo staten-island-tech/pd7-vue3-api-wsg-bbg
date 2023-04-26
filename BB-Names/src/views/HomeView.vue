@@ -1,7 +1,9 @@
 <template>
-  <p>
-    <TheGraph v-for="(babies, index) in BBN" :key="babies.nm" :id="index + 1" :BBN="babies" />
-  </p>
+  <<<<<<< HEAD =======
+  <div id="container">
+    <TheGraph />
+  </div>
+  >>>>>>> main
 </template>
 
 <script setup>
@@ -18,7 +20,18 @@ async function fetchData() {
 onMounted(() => {
   fetchData()
 })
+
+const hate = ['a', 'a', 'a', 'a']
 /* export default {} */
 </script>
 
-<style scoped></style>
+<style scoped>
+#container {
+  background-color: brown;
+}
+.cards {
+  font-size: 30rem;
+  color: black;
+  background-color: aqua;
+}
+</style>
