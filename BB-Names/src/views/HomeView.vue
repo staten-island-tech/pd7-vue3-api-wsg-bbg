@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <sub v-for="babies in BBN.value" :key="babies">
-      {{ babies.nm }}
+  <div id="container">
+    <sub v-for="babies in BBN.value" :key="babies.nm" class="cards">
+      {{ babies }}
     </sub>
+
     <TheGraph />
   </div>
 </template>
@@ -21,7 +22,18 @@ async function fetchData() {
 onMounted(() => {
   fetchData()
 })
+
+const hate = ['a', 'a', 'a', 'a']
 /* export default {} */
 </script>
 
-<style scoped></style>
+<style scoped>
+#container {
+  background-color: brown;
+}
+.cards {
+  font-size: 30rem;
+  color: black;
+  background-color: aqua;
+}
+</style>
