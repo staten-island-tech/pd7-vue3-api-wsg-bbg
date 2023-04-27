@@ -1,9 +1,7 @@
 <template>
-  <<<<<<< HEAD =======
   <div id="container">
     <TheGraph />
   </div>
-  >>>>>>> main
 </template>
 
 <script setup>
