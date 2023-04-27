@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <TheGraph />
+    <TheGraph v-for="(babies, index) in BBN" :key="babies.nm" :id="index + 1" :BBN="babies"/>
   </div>
 </template>
 
