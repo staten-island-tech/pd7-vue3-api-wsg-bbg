@@ -20,14 +20,11 @@ async function fetchData() {
 onMounted(() => {
   fetchData()
 })
-
-const hate = ['a', 'a', 'a', 'a']
-export default { name: 'App', components: { TrialGraph, TheGraph } }
 </script>
 
 <style scoped>
 #container {
-  background-color: brown;
+  /* background-color: brown; */
 }
 .cards {
   font-size: 30rem;
