@@ -1,30 +1,37 @@
 <template>
   <div>
-    <canvas id="myChart"></canvas>
+    <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
   </div>
 </template>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js">
- const ctx = document.getElementById('myChart');
+<script>
+import { Bar } from 'vue-chartjs'
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
+export default {
+  name: 'BarChart',
+  components: { Bar },
+  data() {
+    return {
+      chartData: {
+        labels: ['January', 'February', 'March'],
+        datasets: [{ data: [40, 20, 12] }]
+      },
+      chartOptions: {
+        responsive: true
       }
     }
   }
-});
+}
 </script>
 
 <style lang="scss" scoped></style>
