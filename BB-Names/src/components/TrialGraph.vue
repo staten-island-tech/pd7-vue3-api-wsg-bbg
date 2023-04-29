@@ -20,11 +20,12 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 export default {
   name: 'BarChart',
   components: { Bar },
+
   data() {
     return {
       chartData: {
-        labels: ['January', 'February', 'March'],
-        datasets: [{ data: [40, 20, 12] }]
+        labels: [],
+        datasets: [{ data: [40, 20, 12, 79] }]
       },
       chartOptions: {
         responsive: true

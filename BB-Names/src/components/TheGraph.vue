@@ -5,13 +5,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    BBN: Object,
-    id: Number
-  }
-}
+<script setup>
+const props = defineProps({
+  BBN: Object,
+  id: Number
+})
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
