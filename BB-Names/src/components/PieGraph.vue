@@ -1,37 +1,41 @@
 <template>
-  <Doughnut :v-if="loaded" :data="chartData" :options="chartOptions" />
+  <div>
+    <Pie v-if="loaded" :data="datas" :options="options" />
+  </div>
 </template>
 
 <script>
-import { Doughnut } from 'vue-chartjs'
+import { Pie } from 'vue-chartjs'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-
 ChartJS.register(ArcElement, Tooltip, Legend)
 
 export default {
-  name: 'DoughChart',
+  name: 'PieChart',
   components: {
-    Doughnut
+    Pie
   },
   data() {
     return {
       loaded: false,
-      chartData: { labels: ['Female', 'Male'], datasets: [{ data: [] }] },
-      chartOptions: {
+      datas: {
+        labels: ['MALE', 'FEMALE'],
+        datasets: [{ data: [] }]
+      },
+      options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        backgroundColor: ['#0000FF', '#FFC0CB']
       }
     }
   },
   async mounted() {
-    this.loaded = false
     try {
       const res = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
       const BabyNames = await res.json()
       const male = BabyNames.filter((babies) => babies.gndr === 'MALE')
-      this.chartData.datasets[0].data.push(male.length)
+      this.datas.datasets[0].data.push(male.length)
       const female = BabyNames.filter((babies) => babies.gndr === 'FEMALE')
-      this.chartData.datasets[0].data.push(female.length)
+      this.datas.datasets[0].data.push(female.length)
       this.loaded = true
     } catch (e) {
       console.error(e)
@@ -40,4 +44,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

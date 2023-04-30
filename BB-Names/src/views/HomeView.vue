@@ -1,21 +1,20 @@
 <template>
   <div id="container">
-    <TrialGraph />
-    <!-- <TheGraph
-      v-for="(babies, index) in BBN"
-      :key="babies.nm"
-      :id="index + 1"
-      :BBN="babies"
-      class="cards"
-    /> -->
+    <div class="graph">
+      <PieGraphVue />
+      <BarGraphVue />
+    </div>
+    <!-- <div class="names">
+      <TheGraph v-for="babies in BBN" :key="babies.nm" :BBN="babies" />
+    </div> -->
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeMount } from 'vue'
 import TheGraph from '../components/TheGraph.vue'
-import TrialGraph from '../components/TrialGraph.vue'
-import TrialTwoVue from '../components/TrialTwo.vue'
+import BarGraphVue from '../components/BarGraph.vue'
+import PieGraphVue from '../components/PieGraph.vue'
 
 const BBN = ref('')
 async function fetchData() {
