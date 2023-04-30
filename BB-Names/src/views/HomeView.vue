@@ -1,9 +1,7 @@
 <template>
   <div id="container">
-    <div class="graph">
-      <PieGraphVue />
-      <BarGraphVue />
-    </div>
+    <PieGraphVue />
+    <BarGraphVue />
     <!-- <div class="names">
       <TheGraph v-for="babies in BBN" :key="babies.nm" :BBN="babies" />
     </div> -->
