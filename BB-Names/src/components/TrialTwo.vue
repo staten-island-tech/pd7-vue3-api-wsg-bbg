@@ -20,7 +20,7 @@ export default {
       datasets: {
         labels: ['MALE', 'FEMALE'],
         backgroundColor: ['#0000FF', '#FFC0CB'],
-        data: {}
+        data: []
       },
       options: {
         responsive: true,
