@@ -13,20 +13,13 @@ import BarGraphVue from '../components/BarGraph.vue'
 </script>
 
 <style scoped>
-.barGraph {
-  margin: auto;
-  width: 75%;
-}
 .barg {
   width: 30rem;
   height: 30rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 nav {
   width: 100%;
   font-size: 1rem;
-  text-align: center;
   margin-top: 2rem;
 }
 

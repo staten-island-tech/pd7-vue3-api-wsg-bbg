@@ -1,11 +1,11 @@
 <template>
   <div>
-    <nav>
+    <!-- <nav>
       <router-link :to="babyPath">
         <h1>{{ BBN.nm }}</h1>
         <h2>{{ id }}</h2>
       </router-link>
-    </nav>
+    </nav> -->
 
     <h1>{{ BBN.nm }}</h1>
     <h2>{{ BBN.gndr }}</h2>
