@@ -27,18 +27,13 @@ export default {
       loaded: false,
       //this won't show sob//
       datas: {
-        labels: [
-          'ASIAN AND PACIFIC ISLANDER',
-          'BLACK NON HISPANIC',
-          'HISPANIC',
-          'WHITE NON HISPANIC'
-        ],
-        datasets: [{ label: 'Number of Popular Names by Race', data: [] }]
+        labels: ['MALE', 'FEMALE'],
+        datasets: [{ label: 'Number of Popular Baby Names by Gender', data: [] }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        backgroundColor: ['#0000FF', '#FFC0CB', '#A020F0', '#00FF00']
+        backgroundColor: ['#0000FF', '#FFC0CB']
       }
     }
   },
@@ -46,14 +41,10 @@ export default {
     try {
       const res = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
       const BabyNames = await res.json()
-      const api = BabyNames.filter((babies) => babies.ethcty === 'ASIAN AND PACIFIC ISLANDER')
-      this.datas.datasets[0].data.push(api.length)
-      const bnh = BabyNames.filter((babies) => babies.ethcty === 'BLACK NON HISPANIC')
-      this.datas.datasets[0].data.push(bnh.length)
-      const h = BabyNames.filter((babies) => babies.ethcty === 'HISPANIC')
-      this.datas.datasets[0].data.push(h.length)
-      const wnh = BabyNames.filter((babies) => babies.ethcty === 'WHITE NON HISPANIC')
-      this.datas.datasets[0].data.push(wnh.length)
+      const male = BabyNames.filter((babies) => babies.gndr === 'MALE')
+      this.datas.datasets[0].data.push(male.length)
+      const female = BabyNames.filter((babies) => babies.gndr === 'FEMALE')
+      this.datas.datasets[0].data.push(female.length)
       this.loaded = true
     } catch (e) {
       console.error(e)
