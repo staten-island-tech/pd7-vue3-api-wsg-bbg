@@ -1,5 +1,12 @@
 <template>
   <div>
+    <nav>
+      <router-link :to="babyPath">
+        <h1>{{ BBN.nm }}</h1>
+        <h2>{{ id }}</h2>
+      </router-link>
+    </nav>
+
     <h1>{{ BBN.nm }}</h1>
     <h2>{{ BBN.gndr }}</h2>
     <h3>{{ BBN.ethcty }}</h3>
@@ -7,11 +14,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const props = defineProps({
-  BBN: Array,
+  BBN: Object,
   id: Number
+})
+
+const babyPath = computed(() => {
+  return `/BabyDataGeneral/${props.BBN.nm}`
 })
 </script>
 
