@@ -25,7 +25,6 @@ export default {
   data() {
     return {
       loaded: false,
-      label: ['Race with the most popular baby names'],
       //this won't show sob//
       datas: {
         labels: [
@@ -34,7 +33,7 @@ export default {
           'HISPANIC',
           'WHITE NON HISPANIC'
         ],
-        datasets: [{ data: [] }]
+        datasets: [{ label: 'Number of Popular Names by Race', data: [] }]
       },
       options: {
         responsive: true,
