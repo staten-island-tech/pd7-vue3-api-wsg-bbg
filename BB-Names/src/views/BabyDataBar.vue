@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BarGraphVue />
+    <BarGraphVue class="bar" />
   </div>
 </template>
 
@@ -8,4 +8,9 @@
 import BarGraphVue from '../components/BarGraph.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.bar {
+  width: 30rem;
+  height: 30rem;
+}
+</style>

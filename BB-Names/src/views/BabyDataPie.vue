@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PieGraphVue />
+    <PieGraphVue class="pie" />
   </div>
 </template>
 
@@ -8,4 +8,9 @@
 import PieGraphVue from '../components/PieGraph.vue'
 </script>
 
-<style scoped></style>
+<style scoped>
+.pie {
+  width: 30rem;
+  height: 30rem;
+}
+</style>
