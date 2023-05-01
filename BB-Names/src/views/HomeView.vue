@@ -1,5 +1,9 @@
 <template>
   <div id="container">
+    <nav>
+      <RouterLink to="/BabyDataBar/" class="bar">Bar Graph</RouterLink>
+      <RouterLink to="/BabyDataPie/" class="pie">Pie Graph</RouterLink>
+    </nav>
     <GraphNames
       v-for="babies in BBN"
       :key="babies.nm"
@@ -45,5 +49,29 @@ onBeforeMount(() => {
   width: 12rem;
   height: 12rem;
   text-align: center;
+}
+nav {
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: pink;
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid blue;
+}
+
+nav a:first-of-type {
+  border: 0;
 }
 </style>
