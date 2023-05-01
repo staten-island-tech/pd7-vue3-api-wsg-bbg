@@ -10,8 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/BabyDataBar/:id">BarGraph</RouterLink>
-        <RouterLink to="/BabyDataPie/:id">PieGraph</RouterLink>
+        <RouterLink to="/BabyDataBar/">BarGraph</RouterLink>
+        <RouterLink to="/BabyDataPie/">PieGraph</RouterLink>
       </nav>
     </div>
   </header>

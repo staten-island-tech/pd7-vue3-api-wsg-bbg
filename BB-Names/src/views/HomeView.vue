@@ -1,15 +1,18 @@
 <template>
   <div id="container">
-    <PieGraphVue />
-    <BarGraphVue />
+    <GraphNames
+      v-for="(babies, index) in BBN"
+      :key="babies.nm"
+      :BBN="babies"
+      :id="index + 1"
+      class="cards"
+    />
   </div>
 </template>
 
 <script setup>
 import { ref, onBeforeMount } from 'vue'
 import GraphNames from '../components/GraphNames.vue'
-import BarGraphVue from '../components/BarGraph.vue'
-import PieGraphVue from '../components/PieGraph.vue'
 
 const BBN = ref('')
 async function fetchData() {
@@ -34,9 +37,12 @@ onBeforeMount(() => {
   flex-wrap: wrap;
 }
 .cards {
-  font-size: 1rem;
   color: black;
-  background-color: aqua;
+  background-color: lightgreen;
+  font-size: 1rem;
   margin: 1rem;
+  width: 12rem;
+  height: 12rem;
+  text-align: center;
 }
 </style>

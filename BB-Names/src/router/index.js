@@ -10,7 +10,7 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/BabyDataBar/:id',
+      path: '/BabyDataBar',
       name: 'BabyBar',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
@@ -18,7 +18,7 @@ const router = createRouter({
       component: () => import('../views/BabyDataBar.vue')
     },
     {
-      path: '/BabyDataPie/:id',
+      path: '/BabyDataPie',
       name: 'BabyPie',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
