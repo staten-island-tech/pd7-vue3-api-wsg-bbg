@@ -29,7 +29,7 @@ export default {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        backgroundColor: ['#0000FF', '#FFC0CB', '#A020F0', '#00FF00']
+        backgroundColor: ['#E4C1F9', '#F694C1', '#D3F8E2', '#CCDCFD']
       }
     }
   },
