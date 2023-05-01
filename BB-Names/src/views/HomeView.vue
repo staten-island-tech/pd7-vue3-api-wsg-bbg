@@ -1,10 +1,11 @@
 <template>
   <div id="container">
     <GraphNames
-      v-for="(babies, index) in BBN"
+      v-for="babies in BBN"
       :key="babies.nm"
       :BBN="babies"
-      :id="index + 1"
+      :gndr="babies.gnder"
+      :ethcty="babies.ethcty"
       class="cards"
     />
   </div>
@@ -38,7 +39,7 @@ onBeforeMount(() => {
 }
 .cards {
   color: black;
-  background-color: lightgreen;
+  background-color: #54d8da;
   font-size: 1rem;
   margin: 1rem;
   width: 12rem;
