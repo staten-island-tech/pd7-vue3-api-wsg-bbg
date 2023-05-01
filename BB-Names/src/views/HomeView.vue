@@ -2,15 +2,12 @@
   <div id="container">
     <PieGraphVue />
     <BarGraphVue />
-    <!-- <div class="names">
-      <TheGraph v-for="babies in BBN" :key="babies.nm" :BBN="babies" />
-    </div> -->
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeMount } from 'vue'
-import TheGraph from '../components/TheGraph.vue'
+import { ref, onBeforeMount } from 'vue'
+import GraphNames from '../components/GraphNames.vue'
 import BarGraphVue from '../components/BarGraph.vue'
 import PieGraphVue from '../components/PieGraph.vue'
 

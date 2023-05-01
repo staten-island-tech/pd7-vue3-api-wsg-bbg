@@ -1,11 +1,7 @@
 <template>
-  <div><BarGraphVue /></div>
+  <div></div>
 </template>
 
-<script>
-import BarGraph from '../components/BarGraph.vue'
-import BarGraph from '../components/BarGraph.vue'
-export default { components: { BarGraph } }
-</script>
+<script setup></script>
 
 <style lang="scss" scoped></style>
