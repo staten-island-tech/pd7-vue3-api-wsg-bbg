@@ -8,11 +8,11 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
-      <nav>
+      <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/BabyDataBar/">BarGraph</RouterLink>
         <RouterLink to="/BabyDataPie/">PieGraph</RouterLink>
-      </nav>
+      </nav> -->
     </div>
   </header>
 
