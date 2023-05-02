@@ -43,11 +43,11 @@ onBeforeMount(() => {
 }
 .cards {
   color: black;
-  background-color: cyan;
+  background-color: lightpink;
   font-size: 1rem;
   margin: 1rem;
-  width: 12rem;
-  height: 12rem;
+  width: 15rem;
+  padding: 1rem;
   border-radius: 1rem;
   text-align: center;
 }
